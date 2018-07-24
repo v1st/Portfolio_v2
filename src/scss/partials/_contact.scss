@@ -1,0 +1,97 @@
+.contact {
+    @include flexbox();
+    flex-direction: column;
+    width: 100%;
+    max-width: 50rem;
+    min-height: 40rem;
+}
+
+/* FORM CONTENT */
+
+.form {
+    @include flexbox();
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.label {
+    font-size: 1.8rem;
+    margin: 2rem 0 0 0;
+}
+
+.bar {
+    display: block;
+    position: relative;
+    z-index: 1;
+    height: 0.3rem;
+    width: 0;
+    left: 0;
+    bottom: 0.2rem;
+    background: $lime-green;
+    transition: 0.2s ease-out;
+}
+
+.input {
+    width: 100%;
+    height: 3.5rem;
+    background-color: $dark;
+    border: none;
+    font-size: 1.8rem;
+    padding: 0 1rem;
+    border-bottom: 0.1rem solid $dark2;
+    transition: ease-out 0.2s;
+    &:focus {
+        outline: none;
+        border: transparent;
+        &~.bar {
+            width: 100%;
+        }
+    }
+}
+
+.input__message {
+    width: 100%;
+    resize: vertical;
+    min-height: 10rem;
+    background-color: $dark;
+    border: none;
+    border-bottom: 0.1rem solid $dark2;
+    font-size: 1.8rem;
+    padding: 0 1rem;
+    overflow-y: inherit;
+    &:focus {
+        outline: none;
+        border: transparent;
+        &~.bar {
+            width: 100%;
+        }
+    }
+}
+
+.submit {
+    @include flexbox();
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid $lime-green;
+    margin: 2rem 0;
+    background-color: transparent;
+    color: $lime-green;
+    font-size: 1.8rem;
+    transition: all 0.3s;
+    &:hover {
+        background-color: $lime-green;
+        color: $white;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    .contact {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

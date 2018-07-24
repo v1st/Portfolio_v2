@@ -1,0 +1,14 @@
+.about {
+    @include flexbox();
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0;
+    max-width: 100rem;
+    margin: 2rem auto;
+}
+.text {
+    color: $dark-grey;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+

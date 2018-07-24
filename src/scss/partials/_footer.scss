@@ -1,0 +1,58 @@
+.footer {
+    position: relative;
+    @include flexbox();
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20rem;
+    border-top: 0.1rem solid $lime-green;
+    margin-top: 2rem;
+    background: $dark;
+}
+
+.links--big {
+    @include flexbox();
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin: 2rem 0;
+}
+
+.icon {
+    @include flexbox();
+    justify-content: center;
+    align-items: center;
+    width: 5.5rem;
+    height: 5.5rem;
+    margin: 0 1rem;
+    transition: ease-out 0.25s;
+    cursor: pointer;
+    background: $dark2;
+    &:hover {
+        background-color: $lime-green;
+    }
+}
+
+.github--big,
+.linkedin--big {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+}
+
+.github--big {
+    background-image: url(/src/images/white-github.png);
+}
+
+.linkedin--big {
+    background-image: url(/src/images/white-linkedin.png);
+}
+
+.text--mini-green {
+    @extend %text--mini;
+    color: $lime-green;
+}
