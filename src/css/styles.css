@@ -52,7 +52,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: #6aaad5;
-    background-image: url(../images/comp2.png);
+    background-image: url(https://raw.githubusercontent.com/v1st/Portfolio_v2/master/src/images/comp2.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -145,10 +145,10 @@ body {
     cursor: pointer; }
 
 .github {
-  background-image: url(../images/github.png); }
+  background-image: url(https://raw.githubusercontent.com/v1st/Portfolio_v2/master/src/images/github.png); }
 
 .linkedin {
-  background-image: url(../images/linkedin.png); }
+  background-image: url(https://raw.githubusercontent.com/v1st/Portfolio_v2/master/src/images/linkedin.png); }
 
 .work {
   display: -webkit-box;
@@ -412,13 +412,13 @@ img {
   height: 5rem;
   margin: 0 auto;
   background: #44799d;
-  background-image: url(/src/images/uparrow.png);
+  background-image: url(https://raw.githubusercontent.com/v1st/Portfolio_v2/master/src/images/uparrow.png);
   background-size: contain;
   background-repeat: no-repeat;
   transition: ease-in-out 0.25s; }
   .scrollBtn:hover {
     background: #6aaad5;
-    background-image: url(/src/images/uparrow.png);
+    background-image: url(https://raw.githubusercontent.com/v1st/Portfolio_v2/master/src/images/uparrow.png);
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer; }
@@ -477,10 +477,10 @@ img {
   background-blend-mode: luminosity; }
 
 .github--big {
-  background-image: url(../images/white-github.png); }
+  background-image: url(https://raw.githubusercontent.com/v1st/Portfolio_v2/master/src/images/white-github.png); }
 
 .linkedin--big {
-  background-image: url(../images/white-linkedin.png); }
+  background-image: url(https://raw.githubusercontent.com/v1st/Portfolio_v2/master/src/images/white-linkedin.png); }
 
 .text--mini-green {
   color: #6aaad5; }
