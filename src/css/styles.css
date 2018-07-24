@@ -412,13 +412,13 @@ img {
   height: 5rem;
   margin: 0 auto;
   background: #44799d;
-  background-image: url(/src/images/uparrow.png);
+  background-image: url(../images/uparrow.png);
   background-size: contain;
   background-repeat: no-repeat;
   transition: ease-in-out 0.25s; }
   .scrollBtn:hover {
     background: #6aaad5;
-    background-image: url(/src/images/uparrow.png);
+    background-image: url(../images/uparrow.png);
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer; }
