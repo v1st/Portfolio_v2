@@ -1,183 +1,192 @@
 .header {
-    @include flexbox();
-    flex-direction: column;
-    position: relative;
+  @include flexbox();
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 0 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100vh;
-    padding: 0 2rem;
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: $lime-green;
-        background-image: url(../images/comp2.png);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-blend-mode: soft-light;
-        opacity: 0.2;
-        z-index: -1;
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 50%;
-        background: linear-gradient(0deg, $white 25%, rgba(255, 255, 255, 0) 100%);
-    }
+    background-color: $lime-green;
+    background-image: url(../images/comp2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: soft-light;
+    opacity: 0.2;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(0deg, $white 25%, rgba(255, 255, 255, 0) 100%);
+  }
 }
 
 /* JUMBOTRON CONTENT */
 
 .jumbo {
-    @include flexbox();
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 100rem;
-    height: 80%;
-    margin: 0 auto;
+  @include flexbox();
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100rem;
+  height: 80%;
+  margin: 0 auto;
 }
 
 .jumbo__title {
-    width: 100%;
-    font-size: 1.8rem;
-    font-weight: 300;
-    color: $lime-green;
-    text-transform: uppercase;
-    line-height: 1.5;
-    text-align: center;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: $lime-green;
+  text-transform: uppercase;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .jumbo__text {
-    width: 80%;
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: $light-grey;
-    text-transform: uppercase;
-    line-height: 3rem;
-    text-align: center;
+  width: 80%;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: $light-grey;
+  text-transform: uppercase;
+  line-height: 3rem;
+  text-align: center;
 }
 
 .break {
-    width: 3.5rem;
-    height: 0.3rem;
-    background: $lime-green;
-    margin: 1rem auto 1rem auto;
+  width: 3.5rem;
+  height: 0.3rem;
+  background: $lime-green;
+  margin: 1rem auto 1rem auto;
 }
 
 /* CONNECT BAR WITH LINKS */
 
 .links {
-    @include flexbox();
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: auto;
-    height: 3rem;
-    margin: 3rem 0;
+  @include flexbox();
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 3rem;
+  margin: 3rem 0;
 }
 
 %text--mini {
-    font-size: 1.5rem;
-    text-transform: uppercase;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 .text--mini {
-    @extend %text--mini;
-    margin: 0 0.5rem 0 0;
+  @extend %text--mini;
+  margin: 0 0.5rem 0 0;
 }
 
 .github,
 .linkedin {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0.5rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-blend-mode: color;
-    &:hover {
-        cursor: pointer;
-    }
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: color;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .github {
-    background-image: url(../images/github.png);
+  background-image: url(../images/github.png);
 }
 
 .linkedin {
-    background-image: url(../images/linkedin.png);
+  background-image: url(../images/linkedin.png);
 }
 
 .work {
-    @include flexbox();
-    justify-content: center;
-    align-items: center;
-    width: 15rem;
-    height: 4rem;
-    border: 0.2rem solid $dark-grey;
-    margin: 1rem 0;
-    font-size: 1.5rem;
-    transition: ease-out 0.25s;
-    &:hover {
-        cursor: pointer;
-        background: $lime-green;
-        color: $white;
-        border: none;
-    }
+  @include flexbox();
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 4rem;
+  border: 0.2rem solid $dark-grey;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  transition: ease-out 0.25s;
+
+  &:hover {
+    cursor: pointer;
+    background: $lime-green;
+    color: $white;
+    border: none;
+  }
 }
 
 @media screen and (min-width: 1000px) {
-    .jumbo__title {
-        font-size: 5rem;
-        line-height: 6rem;
-        text-align: center;
-    }
-    .jumbo__text {
-        font-size: 2.5rem;
-        line-height: 4rem;
-        margin: 0;
-        text-align: center;
-    }
-    .work {
-        height: 5rem;
-        width: 22rem;
-        font-size: 2rem;
-    }
+  .jumbo__title {
+    font-size: 5rem;
+    line-height: 6rem;
+    text-align: center;
+  }
+
+  .jumbo__text {
+    font-size: 2.5rem;
+    line-height: 4rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  .work {
+    height: 5rem;
+    width: 22rem;
+    font-size: 2rem;
+  }
 }
 
 @media screen and (min-width: 655px) and (max-width: 1000px) {
-    .jumbo__title {
-        font-size: 3.5rem;
-        line-height: 4rem;
-    }
-    .jumbo__text {
-        font-size: 2.25rem;
-        line-height: 4rem;
-    }
-    .work {
-        height: 5rem;
-        width: 22rem;
-        font-size: 2rem;
-    }
+  .jumbo__title {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+
+  .jumbo__text {
+    font-size: 2.25rem;
+    line-height: 4rem;
+  }
+
+  .work {
+    height: 5rem;
+    width: 22rem;
+    font-size: 2rem;
+  }
 }
 
 @media screen and (min-width: 350px) and (max-width: 654px) {
-    .jumbo__title {
-        font-size: 2.5rem;
-    }
-    .jumbo__text {
-        font-size: 1.8rem;
-        line-height: 3.5rem;
-    }
+  .jumbo__title {
+    font-size: 2.6rem;
+  }
+
+  .jumbo__text {
+    font-size: 1.8rem;
+    line-height: 3.5rem;
+  }
 }
