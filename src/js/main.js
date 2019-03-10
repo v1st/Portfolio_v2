@@ -10,8 +10,10 @@ function scroll(anchor) {
   });
 }
 
+// Smooth scroll from top of page
 viewProjects.addEventListener('click', () => {
   scroll(portfolio.offsetTop);
 });
 
+// Scroll back to top of page
 toTop.addEventListener('click', () => scroll(0));

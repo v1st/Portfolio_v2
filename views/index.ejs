@@ -75,28 +75,7 @@
       </p>
     </section>
 
-    <section class="contact">
-      <h2 class="title">Contact</h2>
-      <form action="/contact" method="post" class="form" id="form" role="form">
-        <div>
-          <label for="name" class="label">Name</label>
-          <input type="text" name="name" class="input" id="name" placeholder="Your name" required="required">
-          <span class="bar"></span>
-        </div>
-        <div>
-          <label for="email" class="label">Email</label>
-          <input type="text" name="email" class="input" id="email" placeholder="Your email" required="required">
-          <span class="bar"></span>
-        </div>
-        <div>
-          <label for="message" class="label">Message</label>
-          <textarea name="message" class="input__message" id="message" cols="30" rows="10" placeholder="Enter your message here"
-            required="required"></textarea>
-          <span class="bar"></span>
-        </div>
-        <button type="submit" class="submit" id="submit">Submit</button>
-      </form>
-    </section>
+    <% include ./partials/form %>
 
   </div>
 

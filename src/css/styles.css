@@ -327,6 +327,12 @@ body {
   min-height: 40rem; }
 
 /* FORM CONTENT */
+.contact__success {
+  font-size: 1.8rem;
+  margin: auto;
+  font-weight: bold;
+  color: #6aaad5; }
+
 .form {
   display: -webkit-box;
   display: -moz-box;
