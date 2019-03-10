@@ -4,7 +4,7 @@
   justify-content: center;
   width: 100%;
   max-width: 100rem;
-  height: auto;
+  height: 100%;
 }
 
 .title {
@@ -22,28 +22,58 @@
   flex-flow: nowrap;
   justify-content: center;
   align-content: center;
+  width: 100%;
   max-width: 100%;
-  height: 360px;
+  min-height: 360px;
+  height: 100%;
   margin: 0 auto;
 }
 
 .project__img {
   @include flexbox();
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 0 0 100%;
   background: $grey;
-  width: 30%;
+  min-width: 360px;
   height: 360px;
   margin: 0.1rem;
   transform-style: preserve-3d;
+  position: relative;
+  overflow: hidden;
 }
 
 .project__text {
+  color: $white;
   font-size: 35px;
   font-weight: bold;
   text-align: center;
   transform: translateZ(30px);
+}
+
+.project__button-wrap {
+  transform: translateZ(30px);
+}
+
+.project__button {
+  font-size: 18px;
+  padding: 5px 10px;
+  border: 1px solid $dark2;
+  margin: 0px 2px;
+  background: $white;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.vid {
+  position: absolute;
+  z-index: -1;
+  min-width: 100%;
+  max-height: 100%;
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 1050px) {
@@ -53,22 +83,62 @@
   }
 }
 
-@media screen and (min-width: 655px) and (max-width: 1049px) {
+@media screen and (min-width: 860px) and (max-width: 1110px) {
+  .project-container {
+    min-height: 0;
+  }
+
   .project__img {
-    width: 33%;
+    min-width: 280px;
+    height: 280px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 860px) {
+  .project-container {
+    min-height: 0;
+  }
+
+  .project__img {
+    min-width: 230px;
+    height: 230px;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 700px) {
+  .project-container {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: none;
+  }
+
+  .project__img {
+    width: 100%;
     height: 360px;
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 654px) {
+@media screen and (min-width: 0px) and (max-width: 420px) {
+  .portfolio {
+    @include flexbox();
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 100rem;
+    height: 100%;
+  }
+
   .project-container {
     flex-direction: column;
-    height: auto;
+    height: 100%;
     width: 100%;
   }
 
   .project__img {
+    min-width: 100%;
     width: 100%;
-    height: 360px;
+    max-width: 100%;
+    height: 260px;
   }
 }
