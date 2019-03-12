@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
 const path = require('path');
-const EMAIL = require('./keys');
+const EMAIL = require('./config/keys');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -59,5 +59,15 @@ app.post('/contact', (req, res) => {
     }
   });
 });
+
+// Serve static assets if in production
+if (process.env.NODE_ENV === 'production') {
+  // Set static folder
+  app.use(express.static('src'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'src', 'views', 'index.ejs'));
+  });
+}
 
 app.listen(port, () => { console.log('Server started'); });

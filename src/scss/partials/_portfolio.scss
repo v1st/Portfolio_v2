@@ -37,14 +37,19 @@
   background: $grey;
   min-width: 360px;
   height: 360px;
-  margin: 0.1rem;
+  margin: 0.5rem;
   transform-style: preserve-3d;
   position: relative;
   overflow: hidden;
+  box-shadow: 0px 8px 20px 0px rgba($dark2, $alpha: 0.25);
+  &:hover{
+    z-index: 2;
+    box-shadow: 0px 10px 25px 10px rgba($dark2, $alpha: 0.25);
+  }
 }
 
 .project__text {
-  color: $white;
+  color: $dark2;
   font-size: 35px;
   font-weight: bold;
   text-align: center;
@@ -73,7 +78,7 @@
   z-index: -1;
   min-width: 100%;
   max-height: 100%;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 @media screen and (min-width: 1050px) {
